@@ -10,12 +10,7 @@ const Profile = ({
   return (
     <div className="profile">
       <div className="description">
-        <img
-          //  src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-          src={avatar}
-          alt="User avatar"
-          className="avatar"
-        />
+        <img src={avatar} alt="User avatar" className="avatar" />
         <p className="name">{username}</p>
         <p className="tag">@{tag}</p>
         <p className="location">{location}</p>
