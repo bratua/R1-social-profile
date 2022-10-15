@@ -1,29 +1,29 @@
-import UserStatsItem from 'components/UserStatsItem/UserStatsItem';
 import PropTypes from 'prop-types';
+import css from './userStats.module.css';
 
 const UserStats = ({ followers, views, likes }) => {
   return (
-    <ul className="stats">
+    <ul className={css.stats}>
       <li>
-        <span className="label">Followers</span>
-        <span className="quantity">{followers}</span>
+        <span className={css.label}>Followers </span>
+        <span className={css.quantity}>{followers}</span>
       </li>
       <li>
-        <span className="label">Views</span>
-        <span className="quantity">{views}</span>
+        <span className={css.label}>Views </span>
+        <span className={css.quantity}>{views}</span>
       </li>
       <li>
-        <span className="label">Likes</span>
-        <span className="quantity">{likes}</span>
+        <span className={css.label}>Likes </span>
+        <span className={css.quantity}>{likes}</span>
       </li>
     </ul>
   );
 };
 
-// UserStats.propTypes = {
-//   followers: PropTypes.string.isRequired,
-//   views: PropTypes.string.isRequired,
-//   likes: PropTypes.string.isRequired,
-// };
+UserStats.propTypes = {
+  followers: PropTypes.number.isRequired,
+  views: PropTypes.number.isRequired,
+  likes: PropTypes.number.isRequired,
+};
 
 export default UserStats;

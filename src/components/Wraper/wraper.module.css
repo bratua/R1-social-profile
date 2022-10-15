@@ -1,0 +1,10 @@
+.wraper {
+  display: flex;
+  width: 900px;
+  height: 1060px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid #000000; */
+  background-color: #e7ecf2;
+}

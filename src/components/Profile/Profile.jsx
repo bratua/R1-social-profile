@@ -3,7 +3,13 @@ import css from './profile.module.css';
 import Description from 'components/Description/Description';
 import UserStats from 'components/UserStats/UserStats';
 
-const Profile = ({ username, tag, location, avatar, stats }) => {
+const Profile = ({
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
+}) => {
   return (
     <div className={css.profile}>
       <Description
@@ -12,35 +18,9 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
         location={location}
         avatar={avatar}
       />
-
-      <UserStats stats={stats} />
-
-      {/* <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
-        </li>
-      </ul> */}
+      <UserStats followers={followers} views={views} likes={likes} />
     </div>
   );
 };
-
-// Profile.propTypes = {
-//   username: PropTypes.string.isRequired,
-//   tag: PropTypes.string.isRequired,
-//   location: PropTypes.string.isRequired,
-//   avatar: PropTypes.string.isRequired,
-//   stats: PropTypes.shape({
-//     id: PropTypes.string.isRequired,
-//   }),
-// };
 
 export default Profile;
