@@ -6,19 +6,18 @@ import users from '../../user.json';
 const Wraper = () => {
   return (
     <div className={css.wraper}>
-      <div
-        style={{
-          height: '100vh',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontSize: 40,
-          color: '#010101',
-        }}
-      >
-        {users.map(user => {
-          console.log('MAPPPPPPPPPPPPPPPPPPPPPP', user);
-          return (
+      {users.map(user => {
+        return (
+          <div
+            style={{
+              height: '100vh',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              fontSize: 40,
+              color: '#010101',
+            }}
+          >
             <Profile
               key={user.username}
               username={user.username}
@@ -27,9 +26,9 @@ const Wraper = () => {
               avatar={user.avatar}
               stats={user.stats}
             ></Profile>
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
     </div>
   );
 };
