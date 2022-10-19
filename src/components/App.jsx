@@ -13,7 +13,8 @@ export const App = () => {
     <div
       style={{
         height: '100vh',
-        // display: 'flex',
+        display: 'flex',
+        gap: 50,
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
