@@ -1,7 +1,7 @@
 .item {
   display: flex;
   gap: 10px;
-  width: 300px;
+
   margin: 10px 0;
   padding-left: 10px;
   align-items: center;
@@ -31,7 +31,7 @@
 .avatar {
   width: 70px;
   height: 70px;
-
+  padding: 5px;
   border: 1px solid rgb(219, 214, 214);
   /* background-color: black; */
   border-radius: 15%;
