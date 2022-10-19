@@ -10,12 +10,12 @@ function Statistics({ data, title }) {
       <ul className={css.statList}>
         {data.map(statData => {
           const { id, label, percentage } = statData;
-          const randomHexColor = `#${randomColor()}`;
+          // const randomHexColor = `#${randomColor()}`;
           return (
             <li
               className={css.item}
               key={id}
-              style={{ backgroundColor: randomHexColor }}
+              style={{ backgroundColor: `#${randomColor()}` }}
             >
               <span className={css.label}>{label}</span>
               <span className={css.percentage}>{percentage}%</span>
@@ -30,7 +30,7 @@ function Statistics({ data, title }) {
 Statistics.propTypes = {
   title: PropTypes.string.isRequired,
   data: PropTypes.arrayOf(
-    PropTypes.shape({
+    PropTypes.exact({
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,

@@ -1,11 +1,11 @@
 // import Wraper from './Wraper/Wraper';
 import Profile from './Profile/Profile';
-import user from '../user.json';
 import Statistics from './Statistics/Statistics';
-import statistics from 'statistics.json';
 import FriendList from './FriendList/FriendList';
-import friends from 'friends.json';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
+import user from 'user.json';
+import statistics from 'statistics.json';
+import friends from 'friends.json';
 import transactions from 'transactions.json';
 
 export const App = () => {

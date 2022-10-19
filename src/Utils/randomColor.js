@@ -1,7 +1,6 @@
 export default function randomColor() {
-  const randomHex = Math.round(Math.random() * 160000000)
+  const randomHex = Math.round(Math.random() * 16777215)
     .toString(16)
-    .slice(0, 6);
-  // console.log('randomHex', randomHex);
+    .padStart(6, 0);
   return randomHex;
 }
